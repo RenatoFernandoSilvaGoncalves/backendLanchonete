@@ -1,3 +1,4 @@
+import ProdutoDB from "../DB/produtoDB.js";
 export default class Produto {
     #codigo
     #nome
@@ -66,5 +67,8 @@ export default class Produto {
     async gravar(){}
     async alterar(){}
     async excluir(){}
-    async consultar(){}
+    async consultar(){
+        const produtoDB = new ProdutoDB();
+        return await produtoDB.consultar();
+    }
 }
