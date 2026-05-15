@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import rotaProduto from './routes/rotaProduto.js';
+import rotaPedido from './routes/rotaPedido.js';
 
 //carrega as variaveis de ambiente especificadas no arquivo .env
 dotenv.config();
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/produto', rotaProduto);
+app.use('/pedido', rotaPedido);
 
 app.listen(porta, host, () => {
     console.log(`Servidor rodando em http://${host}:${porta}`);
