@@ -1,0 +1,8 @@
+{
+    "data": "2024-01-15",
+    "valorTotal": 45.90,
+    "itens": [
+        { "produto": 1, "quantidade": 2, "valorUnitario": 15.90 },
+        { "produto": 3, "quantidade": 1, "valorUnitario": 14.10 }
+    ]
+}
