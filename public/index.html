@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Página inicial - Lanchonete</title>
+        <style>
+            df-messenger {
+             --df-messenger-bot-message: #878fac;
+             --df-messenger-button-titlebar-color: white;
+             --df-messenger-chat-background-color: #fafafa;
+             --df-messenger-font-color: white;
+             --df-messenger-send-icon: #878fac;
+             --df-messenger-user-message: #479b3d;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seja bem vindo!</h1>
+        <h2>Esta é nossa página inicial</h2>
+    </body>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+        intent="WELCOME"
+        chat-icon="/icone.png"
+        chat-title="Burguerito"
+        agent-id="2bf3b6f7-6a75-41d9-9759-2b4be030e44c"
+        language-code="pt-br"
+    ></df-messenger>
+</html>

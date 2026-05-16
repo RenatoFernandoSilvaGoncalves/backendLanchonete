@@ -1,5 +1,5 @@
-import obterCardsProdutos from "../DialogFlow/funcoes.js";
-import { apresentarMenu } from "../DialogFlow/funcoes.js";
+import obterCardsProdutos, { processarEscolhaItem } from "../DialogFlow/funcoes.js";
+import { apresentarMenu, confirmarPedido } from "../DialogFlow/funcoes.js";
 export default class DFCtrl{
     obterCardsProdutos(req, resp){
         if (req.method=="GET"){
@@ -31,6 +31,12 @@ export default class DFCtrl{
             switch(intencao){
                 case "verMenu-Sim":
                     resposta = await apresentarMenu(origem);
+                    break;
+                case "RegistrarPedido":
+                    resposta = await processarEscolhaItem(dados,origem);
+                    break;
+                case "Confirmar-pedido-sim":
+                    resposta = await confirmarPedido(dados,origem);
                     break;
             }
 

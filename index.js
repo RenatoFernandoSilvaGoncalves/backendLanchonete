@@ -11,7 +11,7 @@ const porta = 3000;
 const host = '0.0.0.0';
 const app = express();
 app.use(express.json());
-
+app.use(express.static('public'));
 app.use('/produto', rotaProduto);
 app.use("/webhook", rotaDF);
 app.use('/pedido', rotaPedido);

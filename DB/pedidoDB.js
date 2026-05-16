@@ -7,6 +7,8 @@ export default class PedidoDB {
     async gravar(pedido) {
         const conexao = await obterConexao();
         try {
+
+            //assegurar a atomicidade da transação
             await conexao.beginTransaction();
 
             const sqlPedido = 'INSERT INTO pedido (data, valorTotal) VALUES (?, ?)';
